@@ -13,6 +13,31 @@ namespace Laboratorio07
         public MainPage()
         {
             InitializeComponent();
+            List<string> estudiantes = new List<string>();
+            for (int i = 0; i < 20; i++)
+            {
+                estudiantes.Add("Estudiante " + i.ToString());
+            }
+            //lvEstudiantes.ItemsSource = estudiantes;
+
+
+
+            List<Estudiante> estudiantes1 = new List<Estudiante>();
+            for (int i = 0; i < 10; i++)
+            {
+                estudiantes1.Add(
+                    new Estudiante
+                    {
+                        Nombres = "Nombres " + i.ToString(),
+                        Apellidos = "Apellidos " + i.ToString(),
+                        Edad = i
+                    }
+                    ); ;
+            }
+
+            lvEstudiantes1.ItemsSource = estudiantes1;
+
+
         }
     }
 }
