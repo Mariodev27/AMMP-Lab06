@@ -1,3 +1,4 @@
 # Laboratorio07
-Tarea: 4 Grupos de estudiantes separados por Secciones (A, B y C)
+Tarea: Crear un ejemplo usando grupos con xamarin forms
+Caso: Crear grupos de estudiantes separados por Secciones (A, B y C)
 
