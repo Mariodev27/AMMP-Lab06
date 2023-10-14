@@ -13,31 +13,23 @@ namespace Laboratorio07
         public MainPage()
         {
             InitializeComponent();
-            List<string> estudiantes = new List<string>();
-            for (int i = 0; i < 20; i++)
+
+            Item1.Clicked += async (sender, e) =>
             {
-                estudiantes.Add("Estudiante " + i.ToString());
-            }
-            //lvEstudiantes.ItemsSource = estudiantes;
-
-
-
-            List<Estudiante> estudiantes1 = new List<Estudiante>();
-            for (int i = 0; i < 10; i++)
+                await Navigation.PushAsync(new ListViewGroup());
+            };
+            Item12.Clicked += async (sender, e) =>
             {
-                estudiantes1.Add(
-                    new Estudiante
-                    {
-                        Nombres = "Nombres " + i.ToString(),
-                        Apellidos = "Apellidos " + i.ToString(),
-                        Edad = i
-                    }
-                    ); ;
-            }
-
-            lvEstudiantes1.ItemsSource = estudiantes1;
-
-
+                await Navigation.PushAsync(new ListViewDemo());
+            };
+            Item13.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new ListViewCode());
+            };
+            Item14.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new ListViewSource());
+            };
         }
     }
 }
